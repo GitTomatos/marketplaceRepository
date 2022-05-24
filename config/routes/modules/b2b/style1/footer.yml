@@ -1,0 +1,3 @@
+b2b-style1-footer-controllers:
+    resource: ../../../../../src/Module/b2b/style1/Footer/Application/Controller
+    type: annotation

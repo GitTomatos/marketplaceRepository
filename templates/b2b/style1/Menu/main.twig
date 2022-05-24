@@ -1,0 +1,38 @@
+<!--https://www.roseltorg.ru/procedures/search-->
+
+<!DOCTYPE html>
+<html lang="ru" dir="ltr"
+      prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Menu</title>
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('b2b-style1-menu') }}
+    {% endblock %}
+</head>
+
+<body>
+{% block menu %}
+    <div class="b2b-style1-menu-menu">
+        <!-- Developed by http://grohit.com/ -->
+        <section>
+            <nav>
+                <ul class="b2b-style1-menu-menuItems">
+                    {% if isUserLogged %}
+                        <li><a href='/b2b/style1/logout' data-item='Выйти'>Выйти</a></li>
+                    {% else %}
+                        <li><a href='/b2b/style1/authorization' data-item='Войти'>Войти</a></li>
+                    {% endif %}
+                    <li><a href='#' data-item='Заказы'>Заказы</a></li>
+                    <li><a href='#' data-item='Избранное'>Избранное</a></li>
+                    <li><a href='#' data-item='Корзина'>Корзина</a></li>
+                    <li><a href='#' data-item='Контакты'>Контакты</a></li>
+                </ul>
+            </nav>
+
+        </section>
+        <!-- Developed by http://grohit.com/ -->
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!--https://codepen.io/Mohuth/pen/QWgrPvp-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-ca-mode="plus"/>
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('b2b-style1-authorization') }}
+{% endblock %}
+
+
+<div class="authorization-body">
+    <div class="authorization-container">
+        <div class="authorization-screen">
+            <div class="authorization-screen__content">
+                <form class="authorization-login" method="POST">
+                    <div class="authorization-login__field">
+                        <i class="authorization-login__icon fas fa-user"></i>
+                        <input type="text" name="login" class="authorization-login__input" placeholder="Логин / Email">
+                    </div>
+                    <div class="authorization-login__field">
+                        <i class="authorization-login__icon fas fa-lock"></i>
+                        <input type="password" name="pass" class="authorization-login__input" placeholder="Пароль">
+                    </div>
+                    <button class="button authorization-login__submit">
+                        <span class="button__text">Войти</span>
+                        <i class="authorization-button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="authorization-screen__background">
+                <span class="authorization-screen__background__shape authorization-screen__background__shape4"></span>
+                <span class="authorization-screen__background__shape authorization-screen__background__shape3"></span>
+                <span class="authorization-screen__background__shape authorization-screen__background__shape2"></span>
+                <span class="authorization-screen__background__shape authorization-screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+</div>

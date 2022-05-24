@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Просмотр доступных для скачивания шаблонов</title>
+
+    {#    {% block stylesheets %} #}
+    {#        {{ encore_entry_link_tags('b2b-style1-preview') }} #}
+    {#    {% endblock %} #}
+</head>
+<body>
+{% for eCommerceType, modules in templateList %}
+    {% for moduleName, templates in modules %}
+        <p>{{ eCommerceType }} -> {{ moduleName }}</p>
+
+        {% for templateName in templates %}
+            <ul>
+                <li>
+                    <a target="_blank" href="/{{ eCommerceType }}/{{ moduleName }}/{{ templateName|lower }}">
+                        {{ templateName }}
+                    </a>
+                </li>
+            </ul>
+
+            <img src="{{ asset('build/images/' ~ templateName ~ '.png') }}" width="600"
+                 alt="Превью не добавили">
+        {% endfor %}
+    {% endfor %}
+
+    <p></p>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,3 @@
+b2b-style1-menu-controllers:
+    resource: ../../../../../src/Module/b2b/style1/Preview/Application/Controller
+    type: annotation

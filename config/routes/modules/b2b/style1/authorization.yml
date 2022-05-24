@@ -1,0 +1,3 @@
+b2b-style1-authorization-controllers:
+    resource: ../../../../../src/Module/b2b/style1/Authorization/Application/Controller
+    type: annotation

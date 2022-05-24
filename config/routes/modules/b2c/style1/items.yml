@@ -1,0 +1,3 @@
+b2c-style1-items-controllers:
+    resource: ../../../../../src/Module/b2c/style1/Items/Application/Controller
+    type: annotation

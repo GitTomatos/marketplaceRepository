@@ -1,0 +1,144 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="/preview/b2b/style1/assets/css/procedure_info.css">
+    <link rel="stylesheet" href="/preview/b2b/style1/assets/css/lots_list.css">
+{% endblock %}
+
+<section class="lots-list">
+
+    {% if requestPackages|length == 0 %}
+        <div>Нет заявок</div>
+    {% endif %}
+
+    {% set requestPackageNumber = 0 %}
+
+    {% for requestPackage in requestPackages %}
+
+        {% set requestPackageNumber = requestPackageNumber + 1 %}
+
+        <div class="content-wrapper lots-list__wrapper">
+            <h2 class="sub-header">Заявки</h2>
+            <div class="lot-item">
+                <div class="lot-item__status-icon status__icon status__icon--acceptance"
+                     rel="tooltip"
+                     title="Статус - Прием заявок на участие">
+                </div>
+                <div class="lot-item__info">
+                    <div class="lot-item__header">
+                        <div class="lot-item__num">
+                            Заявка {{ requestPackageNumber }}
+                        </div>
+                        <div class="lot-item__status lot-item__status--endtime">
+								<span class="lot-item__inline-title">
+                                    Прием заявок на участие
+								</span>
+                            <time class="lot-item__time" datetime="2022-04-16T21:40:12+03:00">
+                                до &nbsp;27.04.22 09:00:00
+                                <span class="lot-item__days-qty">
+                                (0 дн.) [GMT +3 ]( по Мск)
+                                </span>
+                            </time>
+                        </div>
+                    </div>
+                    <div class="lot-item__subject">
+                        <p>
+                            Поставка лекарственных препаратов для медицинского применения: МНН Хлорпротиксен
+                            (Психиатрия, Наркология)
+                        </p>
+                    </div>
+                    <div class="lot-item__footer">
+                        <div class="lot-item__msp">
+                            <p class="search-results__tooltip" rel="tooltip"
+                               title="Процедура для субъектов малого и среднего предпринимательства">
+                                МСП
+                            </p>
+                        </div>
+                        <div class="lot-item__region">
+                            <i class="lot-item__icon-map"></i>
+                            <p class="search-results__tooltip" rel="tooltip" title="Регион заказчика">
+                                77. Москва
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lot-item__data">
+                    <div class="lot-item__price lot-item__price--initial price">
+                        <i class="price__icon price__icon--drop"></i>
+                        <div class="lot-item__sum">
+                            <p>{{ requestPackage.getPrice }}</p>
+                            <span class="lot-item__currency" rel="tooltip"
+                                  title="Российский рубль">&#8381;
+                                      </span>
+                        </div>
+                    </div>
+                    <div class="lot-item__infoblock lot-item__request">
+                        <p class="lot-item__inline-title">Обеспечение заявки:</p>
+                        <span class="lot-item__summ">не предусмотрено</span>
+                    </div>
+                    <div class="lot-item__infoblock lot-item__contact">
+                        <p class="lot-item__inline-title">Обеспечение контракта:</p>
+                        <span class="lot-item__procent-qty">30,00 % от цены, по которой заключается контракт</span>
+                    </div>
+
+                </div>
+                <div class="lot-item__moredetails">
+                    <button class="lot-item__morelink" type="button">Посмотреть детальную информацию</button>
+                    <div class="lot-item__detailed-info hidden-content">
+                        <h4 class="lot-item__subheader">Этапы</h4>
+                        <table class="lot-item__data-table data-table" data-striping="1">
+
+
+                            <tbody>
+                            <tr class="data-table__item odd">
+                                <td class="data-table__title-td"><span class="data-table__title">Дата публикации</span>
+                                </td>
+                                <td class="data-table__info-td"><p class="data-table__info">16.04.22 21:40:12 (МСК)</p>
+                                </td>
+                            </tr>
+                            <tr class="data-table__item even">
+                                <td class="data-table__title-td"><span class="data-table__title">Дата и время окончания подачи заявок</span>
+                                </td>
+                                <td class="data-table__info-td"><p class="data-table__info">до 27.04.22 09:00:00
+                                        (МСК)</p></td>
+                            </tr>
+                            <tr class="data-table__item odd">
+                                <td class="data-table__title-td"><span
+                                            class="data-table__title">Дата проведения торгов</span></td>
+                                <td class="data-table__info-td"><p class="data-table__info">27.04.22 11:00:00 (МСК)</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                        <h4 class="lot-item__subheader">Заказчики</h4>
+                        <table class="lot-item__data-table data-table" data-striping="1">
+
+
+                            <tbody>
+                            <tr class="data-table__item odd">
+                                <td class="data-table__title-td"><span class="data-table__title">Название организации (ИНН)</span>
+                                </td>
+                                <td class="data-table__info-td"><p class="data-table__info">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ
+                                        БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ "НАЦИОНАЛЬНЫЙ МЕДИЦИНСКИЙ ИССЛЕДОВАТЕЛЬСКИЙ ЦЕНТР
+                                        ПСИХИАТРИИ И НАРКОЛОГИИ ИМЕНИ В.П. СЕРБСКОГО" МИНИСТЕРСТВА ЗДРАВООХРАНЕНИЯ
+                                        РОССИЙСКОЙ ФЕДЕРАЦИИ (ИНН 7704032379)</p></td>
+                            </tr>
+                            <tr class="data-table__item even">
+                                <td class="data-table__title-td"><span class="data-table__title">Место поставки</span>
+                                </td>
+                                <td class="data-table__info-td"><p class="data-table__info">Российская Федерация,
+                                        Москва, ул. Ставропольская, дом 27, стр. 7|Российская Федерация, Москва, ул.
+                                        Потешная, дом 3, стр. 10, склад аптеки</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="lot-item__action">
+                    <a class="button button--brightgreen button--small" href="/">Подтвердить</a>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+</section>

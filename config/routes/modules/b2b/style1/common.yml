@@ -1,0 +1,4 @@
+##Контроллеры, которые могут взаимодействовать со всеми элементами модуля
+#b2b-style1-common-controllers:
+#    resource: ../../../../../src/Module/b2b/style1/Controller
+#    type: annotation

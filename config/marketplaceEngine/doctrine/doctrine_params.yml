@@ -1,0 +1,7 @@
+parameters:
+    modules_mapping:
+        b2b\style1\Table:
+            is_bundle: false
+            dir: '%kernel.project_dir%/src/Module/b2b/style1/Table/Domain/Entity'
+            prefix: 'App\Module\b2b\style1\Table\Domain\Entity'
+            alias: b2b\style1\Table

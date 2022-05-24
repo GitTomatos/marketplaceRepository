@@ -1,0 +1,3 @@
+b2b-style1-table-controllers:
+    resource: ../../../../../src/Module/b2b/style1/Table/Application/Controller
+    type: annotation

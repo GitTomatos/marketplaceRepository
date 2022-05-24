@@ -1,0 +1,4 @@
+parameters:
+    migrations_paths:
+        'migration': '%kernel.project_dir%/migrations'
+        'b2b\style1\Table': '%kernel.project_dir%/migrations/b2b/style1/Table'
